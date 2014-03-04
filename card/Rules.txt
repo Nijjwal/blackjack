@@ -1,0 +1,15 @@
+1. The deck consists of 52 cards and is shuffled before the game starts.
+2. Each player gets 2 cards at the beginning of the game, then each player
+   may ask more cards until burst or stay. 
+3. The last card of the dealer is hidden, only the first card is shown at 
+   the beginning. 
+4. 21 points is the highest score. 
+5. If a players score is over 21 and dealers score is also over 21 , then it's
+   a tie. 
+6. If a players score is greater than dealers score and the score is less than or 
+   equals to 21, then the player wins.  
+7. If a players score is less than dealers score and the dealer is not busted, then
+   the player loses. 
+8. If both scores are equal, then it's a tie. 
+9. Any ace can be either 11 or 1 depending on the situation. Also the program should
+   keep track of aces and adjust score of player/dealer accordingly. 

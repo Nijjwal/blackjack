@@ -1,0 +1,133 @@
+<!--  Please read this first for running the game!
+
+Since the programming part is entirely written on javascript, 
+please enable javascript in your browser.!
+
+Please use Google Chrome to test the single user game
+with the console running. I have not written code for
+the player on the left hand side. Please use buttons
+that are on the right hand side of the game. 
+
+To run the game follow these steps:
+a. Open the index.html file of the game in 'Google Chrome'
+b. Rt. click anywhere on the screen and click on the option
+   'Inspect Element'
+c. Then click on 'Console' tab. Now start using buttons 
+   on the Black Jack Desk.
+d. I have not written code for the player on the left hand
+   side. Please use buttons that are on the right hand side 
+   of the game. 
+   Place a minimum bet and start playing the game. 
+   All the cards provided to the dealer and the player2,
+   score and other additional detail like who won or lost
+   are updated in console as the game progresses.
+
+
+   Bug:
+   1) Both dealer and a player can handle 10 cards at most
+   without getting their individual total score over 21. 
+   Four Aces total = 4
+   Four num 2 cards total =  8
+   Three num 3 cards total = 6
+                       Total score: 18
+   _______________________
+       Total num of cards used = Four + Four + Three = 11
+
+   Whenever the browser draws more than one card at a time
+   for the dealer, some pictures overlap. This is one bug
+   that needs to be fixed. 
+
+   2) Dealer hidden card number is displayed in console.
+   The card number (not a Black Jack value) of first two 
+   dealer cards are shown in console, this is just for 
+   my reference. Second card in the interface remains hidden. 
+   Do not cheat!
+
+   3)Balance function is not complete!
+
+   Thanks, enjoy the game. 
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang=en>
+
+	<head>
+		<meta charset=utf-8>
+		<title>Black Jack Game</title>
+		<link rel="stylesheet" href="css/blackjack.css" />
+		<script src="js/jquery-1.11.0.min.js"></script>
+	</head>
+
+	<body>
+
+	<header>
+	<h1>Black Jack</h1>
+	<h2><a href="javascript:history.go(0)" class="restart">Restart</a></h2>
+
+
+
+	<div>
+		<h3>Total Balance of Player 2 is $: <span id="p2balance">0</span> </h3>
+	 	<h3>Total Bet of Player 2 is $: <span id="p2bet">0</span> </h3>
+	 	<button onclick="cleanTable();">Clean cards on the table</button>	 
+	</div>
+
+
+	</header>
+
+
+
+
+	<div id="table">
+	    <!--Display black Jack table.-->
+		<canvas id="canvasBg" width="800" height="460"></canvas>
+
+		<div id="allcards">
+		<!--Player 2 Canvas for displaying Cards-->
+<canvas id="player2card1" width="800" height="460" ></canvas>
+<canvas id="player2card2" width="800" height="460" ></canvas>
+<canvas id="player2card3" width="800" height="460" ></canvas> 
+<canvas id="player2card4" width="800" height="460" ></canvas> 
+<canvas id="player2card5" width="800" height="460"></canvas> 
+<canvas id="player2card6" width="800" height="460"></canvas> 
+<canvas id="player2card7" width="800" height="460"></canvas> 
+<canvas id="player2card8" width="800" height="460"></canvas> 
+<canvas id="player2card9" width="800" height="460"></canvas> 
+<canvas id="player2card10" width="800" height="460"></canvas>
+<canvas id="player2card11" width="800" height="460"></canvas>  
+		<!--Player 2 Canvas for displaying Cards end-->
+
+		<!--Dealer Canvas for displaying Cards Start-->
+<canvas id="dealercard1" width="800" height="460" ></canvas>
+<canvas id="dealercard2" width="800" height="460" ></canvas>
+<canvas id="dealercard3" width="800" height="460" ></canvas> 
+<canvas id="dealercard4" width="800" height="460" ></canvas> 
+<canvas id="dealercard5" width="800" height="460"></canvas> 
+<canvas id="dealercard6" width="800" height="460"></canvas> 
+<canvas id="dealercard7" width="800" height="460"></canvas> 
+<canvas id="dealercard8" width="800" height="460"></canvas> 
+<canvas id="dealercard9" width="800" height="460"></canvas> 
+<canvas id="dealercard10" width="800" height="460"></canvas>
+<canvas id="dealercard11" width="800" height="460"></canvas>
+<canvas id="showhiddencard" width="800" height="460"></canvas>
+	    <!--Dealer cards-->	
+
+<canvas id="p2balanceHUD" width="800" height="460"></canvas>		
+		</div>
+
+	</div> 
+
+
+	<footer>
+	<p style="color: white; font: 13px verdana,sans-serif;">Nijjwal Shrestha 
+    &copy 2014</p>
+	</footer>
+
+		<script src="js/black-jack.js"></script>
+
+	</body>
+
+</html>

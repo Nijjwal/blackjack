@@ -1,0 +1,41 @@
+body {
+text-align: center; /*imp, if removed, card will be out of board*/
+}
+
+body{
+	background:#303030;
+}
+
+#canvasBg{
+border-radius: 10px;
+border: 1px solid #666;
+background: #232 url(../images/table.png);
+width: 800px;
+height: 460px;
+background-repeat:no-repeat;
+margin: 0 auto;
+display: block;
+position: relative;
+z-index: -1;
+}
+
+
+
+#allcards{ /*Initial location of all cards, individual card's css is in js file*/
+	margin-top:-460px;
+	margin-left: 0px;
+	
+}
+
+a:link    { color: white; text-decoration: none; font: verdana,sans-serif; }      /* unvisited link */
+a:visited { color: green; }      /* visited link */
+a:hover   { color: yellow; }      /* mouse over link */
+
+h1, h2, h3, #p2balance, #p2bet{
+	color: white;
+	font: 15px verdana,sans-serif;
+}
+
+h3{
+	color: orange;
+}
